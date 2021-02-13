@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link href="style.css" rel="stylesheet">
+	  <title>Technical Documentation Page</title>
+	</head>
+<body>
+    <div class="main-container">
+        <header id="top-header">
+            <div class="main-heading">
+                <h1>CSS Basics</h1>
+            </div>
+            <div class="heading-text">
+                <p>This module contains articles, which will help you learn about CSS basics.</p>
+            </div>
+        </header>
+        <div class="padding-container">
+            <div class="sub-container">
+                <aside>
+                    <nav id="navbar">
+                        <header>CSS Documentation</header>
+                        <ul>
+                            <li>
+                                <a class="nav-link nav-heading"href="#Getting_started_with_HTML">Getting started with CSS</a>
+                                <ul>
+                                    <li>
+                                        <a class="nav-link-sub"href="#What_is_CSS?">What is CSS?</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link-sub"href="#Start_with_HTML">Start with an HTML code</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="nav-link nav-heading"href="#Adding_CSS">Adding CSS to HTML</a>
+                                <ul>
+                                    <li>
+                                        <a class="nav-link-sub"href="#Styling_HTML_elements">Styling HTML elements</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link-sub"href="#behavior_of_elements">Behavior of Elements</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="nav-link nav-heading"href="#adding_a_class">Adding a Class</a>
+                                <ul>
+                                    <li>
+                                        <a class="nav-link-sub"href="#styling_based_on_location">Styling based on location</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link-sub"href="#styling_based_on_state">Styling based on state</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="nav-link nav-heading"href="#Creating_hyperlinks">Creating hyperlinks</a>
+                                <ul>
+                                    <li>
+                                        <a class="nav-link-sub"href="#What_is_a_hyperlink?">What is a hyperlink?</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link-sub"href="#Anatomy_of_a_link">Anatomy of a link</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="nav-link nav-heading"href="#Advanced_text_formatting">Advanced text formatting </a>
+                                <ul>
+                                    <li>
+                                        <a class="nav-link-sub"href="#Description_lists">Description lists</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link-sub"href="#Quotations">Quotations</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="nav-link nav-heading"href="#Reference">Reference</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </aside>
+                <main id="main-doc">
+                    <section class="main-section"id="Getting_started_with_HTML">
+                        <header>
+                            <h2>Getting started with CSS</h2>
+                        </header>
+                        <p>CSS is the language for describing the presentation of Web pages, including colors, layout, and fonts. It allows one to adapt the presentation to different types of devices, such as large screens, small screens, or printers. CSS is independent of HTML and can be used with any XML-based markup language.</p>
+                        <article>
+                            <div id="What_is_CSS?">
+                                <h3>What is CSS?</h3>
+                                <p>CSS stands for Cascading Style Sheets with an emphasis placed on “Style.” While HTML is used to structure a web document (defining things like headlines and paragraphs, and allowing you to embed images, video, and other media), CSS comes through and specifies your document’s style—page layouts, colors, and fonts are all determined with CSS. Think of HTML as the foundation (every house has one), and CSS as the aesthetic choices (there’s a big difference between a Victorian mansion and a mid-century modern home).</p>
+                            </div>
+                            <div id="Start_with_HTML">
+                                <h3>Start with an HTML code</h3>
+                                <pre>
+                                <code>&lt;!DOCTYPE html&gt;</code>
+                                <code>&lt;html lang="en"&gt;</code>
+                                <code>&nbsp;&nbsp;&lt;head&gt;</code>
+                                <code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"/&gt;</code>    
+                                <code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Getting started with CSS&lt;/title&gt;</code>
+                                <code>&nbsp;&nbsp;&lt;/head&gt;</code>
+                                <code>&nbsp;&nbsp;&lt;body&gt;</code>
+                                <code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Level one heading&lt;/h1&gt;</code>
+                                <code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is a paragraph of text. In the text is a &lt;span&gt;span element&lt;/span&gt;
+                                and also a &lt;a href="http://example.com">link/&lt;a&gt;.&lt;/p&gt;</code> 
+                                <code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is the second paragraph. It contains an &lt;em&gt;emphasized&lt;/em&gt; element.&lt;/p&gt;</code>    
+                                <code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;</code>
+                                <code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item one&lt;/li&gt;</code>
+                                <code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item two&lt;/li&gt;</code>
+                                <code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item &lt;em&gt;three&lt;/em&gt;&lt;/li&gt;</code>
+                                <code>&nbsp;&nbsp;&lt;/body&gt;</code>                          
+                                <code>&lt;/html&gt;</code>
+                            </pre>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="main-section" id="Adding_CSS">
+                        <header>
+                            <h2>Adding CSS to the HTML document</h2>
+                        </header>
+                        <p>The very first thing we need to do is to tell the HTML document that we have some CSS rules we want it to use. There are three different ways to apply CSS to an HTML document that you'll commonly come across, however, for now, we will look at the most usual and useful way of doing so — linking CSS from the head of your document.</p>
+                        <p>Create a file in the same folder as your HTML document and save it as <code class="inline-code">styles.css</code>. The <code class="inline-code">.css</code> extension shows that this is a CSS file.</p>
+                        <p>To link <code class="inline-code">styles.css</code> to <code class="inline-code">index.html</code> add the following line somewhere inside the <code class="inline-code">&lt;head&gt;</code> of the HTML document:</p>
+                            <pre>
+                                <code>&lt;link rel="stylesheet" href="styles.css"&gt;</code>
+                            </pre>
+                        <p>This <code class="inline-code">&lt;link&gt;</code> element tells the browser that we have a stylesheet, using the rel attribute, and the location of that stylesheet as the value of the href attribute. You can test that the CSS works by adding a rule to styles.css. Using your code editor add the following to your CSS file:</p>
+                            <pre>
+                                <code>h1 {</code>
+                                <code>&nbsp;color: red;</code>
+                                <code>}</code>
+                            </pre>
+                            <p>Save your HTML and CSS files and reload the page in a web browser. The level one heading at the top of the document should now be red. If that happens, congratulations — you have successfully applied some CSS to an HTML document. If that doesn't happen, carefully check that you've typed everything correctly.</p>
+                            <p>You can continue to work in <code class="inline-code">styles.css</code> locally, or you can use our interactive editor below to continue with this tutorial. The interactive editor acts as if the CSS in the first panel is linked to the HTML document, just as we have with our document above.</p>
+                        <article>
+                            <div id="Styling_HTML_elements">
+                                <h3>Styling HTML elements</h3>
+                                <p>By making our heading red we have already demonstrated that we can target and style an HTML element. We do this by targeting an element selector — this is a selector that directly matches an HTML element name. To target all paragraphs in the document you would use the selector <code class="inline-code">p</code>. To turn all paragraphs blue you would use:</p>
+                                <pre>
+                                    <code>p {</code>
+                                    <code>&nbsp;color: blue;</code>
+                                    <code>}</code>
+                                </pre>
+                                <p>You can target multiple selectors at once, by separating the selectors with a comma. If I want all paragraphs and all list items to be blue my rule looks like this:</p>
+                                <pre>
+                                    <code>p, li{</code>
+                                    <code>&nbsp;color: blue;</code>
+                                    <code>}</code>
+                                </pre>
+                                <p>Try this out in the interactive editor below (edit the code boxes), or in your local CSS document.</p>
+                                <pre style="border-color: black; color: black">
+                                    <h1 style="color: black">Level one heading</h1>
+                                    <p>This is a paragraph of text. In the text is a span element and also a link.</p>
+                                    <p>This is the second paragraph. It contains an emphasized element.</p>
+                                        <li>Item one</li>
+                                        <li>Item two</li>
+                                        <li>Item three</li>                        
+                                </pre>
+                                <pre>
+                                    <code>&lt;h1&gt;Level 1 heading&lt;/h1&gt;</code>
+                                    <code>&lt;p&gt;This is a paragraph of text. In the text is a span element and also a link.&lt;/p&gt;</code>
+                                    <code>&lt;p&gt;This is the second paragraph. It contains an emphasized element.&lt;/p&gt;</code>
+                                    <code>&nbsp;&nbsp;&lt;li&gt;Item one&lt;/li&gt;</code>
+                                    <code>&nbsp;&nbsp;&lt;li&gt;Item two&lt;/li&gt;</code>
+                                    <code>&nbsp;&nbsp;&lt;li&gt;Item three&lt;/li&gt;</code>
+                                </pre>
+                            </div>
+                            <div id="behavior_of_elements">
+                                <h3>Changing the default behavior of elements</h3>
+                                <p>When we look at a well-marked up HTML document, even something as simple as our example, we can see how the browser is making the HTML readable by adding some default styling. Headings are large and bold and our list has bullets. This happens because browsers have internal stylesheets containing default styles, which they apply to all pages by default; without them all of the text would run together in a clump and we would have to style everything from scratch. All modern browsers display HTML content by default in pretty much the same way.</p>
+                                <p>However, you will often want something other than the choice the browser has made. This can be done by choosing the HTML element that you want to change, and using a CSS rule to change the way it looks.  A good example is our <code class="inline-code">&lt;ul&gt;</code>, an unordered list. It has list bullets, and if I decide I don't want those bullets I can remove them like so:</p>
+                                <pre>
+                                    <code>li {</code>
+                                    <code>&nbsp;list-style-type: none;</code>
+                                    <code>}</code>
+                                </pre>
+                                <p>Try adding this to your CSS now.</p>
+                                <p>The <code class="inline-code">list-style-type</code> property is a good property to look at on MDN to see which values are supported. Take a look at the page for <code class="inline-code">list-style-type</code> and you will find an interactive example at the top of the page to try some different values in, then all allowable values are detailed further down the page.</p>
+                                <p>Looking at that page you will discover that in addition to removing the list bullets you can change them — try changing them to square bullets by using a value of <code class="inline-code">square</code>.</p>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="main-section"id="adding_a_class">
+                        <header>
+                            <h2>Adding a Class</h2>
+                        </header>
+                        <p>So far we have styled elements based on their HTML element names. This works as long as you want all of the elements of that type in your document to look the same. Most of the time that isn't the case and so you will need to find a way to select a subset of the elements without changing the others. The most common way to do this is to add a class to your HTML element and target that class.</p>
+                        <p>In your HTML document, add a <code class="inline-code">class attribute</code>to the second list item. Your list will now look like this:</p>
+                        <pre>
+                            <code>&lt;ul&gt;</code>
+                            <code>&nbsp;&lt;li&gt;Item one&lt;/li&gt;</code>
+                            <code>&nbsp;&lt;li&gt;class="special">Item two&lt;/li&gt;</code>
+                            <code>&nbsp;&lt;li&gt;Item &lt;em&gt;three&lt;/em&gt;&lt;/li&gt;</code>
+                            <code>&lt;/ul&gt;</code>
+                        </pre>
+                        <p>In your CSS you can target the class of <code class="inline-code">special</code> by creating a selector that starts with a full stop character. Add the following to your CSS file:</p>
+                        <pre>
+                            <code>special {</code>
+                            <code>&nbsp;color: orange;</code>
+                            <code>&nbsp;font-weight: bold;</code>
+                            <code>}</code>
+                        </pre>
+                        <p>You can apply the class of special to any element on your page that you want to have the same look as this list item. For example, you might want the <span> in the paragraph to also be orange and bold. Try adding a class of special to it, then reload your page and see what happens.</p>
+                        <article>
+                            <div id="styling_based_on_location">
+                                <h3>Styling things based on their location in a document</h3>
+                                <p>There are times when you will want something to look different based on where it is in the document. There are a number of selectors that can help you here, but for now we will look at just a couple. In our document are two <code class="inline-code">&lt;em&gt;</code> elements — one inside a paragraph and the other inside a list item. To select only an <code class="inline-code">&lt;em&gt;</code> that is nested inside an <code class="inline-code">&lt;li&gt;</code> element I can use a selector called the descendant combinator, which takes the form of a space between two other selectors.</p>
+                                <p>Add the following rule to your stylesheet.</p>
+                                <pre>
+                                    <code>li em {</code>
+                                    <code>&nbsp;color: rebeccapurple;</code>
+                                    <code>}</code>
+                                </pre>
+                                <p>This selector will select any <code class="inline-code">&lt;em&gt;</code> element that is inside (a descendant of) an <code class="inline-code">&lt;li&gt;</code>. So in your example document, you should find that the <code class="inline-code">&lt;em&gt;</code> in the third list item is now purple, but the one inside the paragraph is unchanged.</p>
+                                <p>Something else you might like to try is styling a paragraph when it comes directly after a heading at the same hierarchy level in the HTML. To do so place a <code class="inline-code">+</code>  (an adjacent sibling combinator) between the selectors.</p>
+                                <p>Try adding this rule to your stylesheet as well:</p>
+                                <pre>
+                                    <code>h1 + {</code>
+                                    <code>&nbsp;font-size: 200%;</code>
+                                    <code>}</code>
+                                </pre>
+                            </div>
+                            <div id="styling_based_on_state">
+                                <h3>Styling things based on state</h3>
+                                <p>The final type of styling we shall take a look at in this tutorial is the ability to style things based on their state. A straightforward example of this is when styling links. When we style a link we need to target the <code class="inline-code">&lt;a&gt;</code> (anchor) element. This has different states depending on whether it is unvisited, visited, being hovered over, focused via the keyboard, or in the process of being clicked (activated). You can use CSS to target these different states — the CSS below styles unvisited links pink and visited links green.</p>
+                                <pre>
+                                    <code>a:link {</code>
+                                    <code>&nbsp;color: pink;</code>
+                                    <code>}</code>
+                                    <code>a:visited {</code>
+                                    <code>&nbsp;color: green;</code>
+                                    <code>}</code>
+                                </pre>
+                                <p>You can change the way the link looks when the user hovers over it, for example removing the underline, which is achieved by in the next rule:</p>
+                                <pre>
+                                    <code>a:hover {</code>
+                                    <code>&nbsp;text-decoration: none;</code>
+                                    <code>}</code>
+                                </pre>
+                            </div>
+                        </article>
+                    </section>
+
+                    <section class="main-section" id="Creating_hyperlinks">
+                        <header>
+                            <h2>Creating hyperlinks</h2>
+                        </header>
+                        <p>Hyperlinks are really important — they are what
+                            makes the Web a web. This article shows the
+                            syntax required to make a link, and discusses
+                            link best practices.</p>
+                        <article>
+                            <div id="What_is_a_hyperlink?">
+                                <h3>What is a hyperlink</h3>
+                                <p>Hyperlinks are one of the most exciting
+                                    innovations the Web has to offer. Well,
+                                    they've been a feature of the Web since
+                                    the very beginning, but they are what
+                                    makes the Web a Web — they allow us to
+                                    link our documents to any other document
+                                    (or other resource) we want to, we can
+                                    also link to specific parts of
+                                    documents, and we can make apps
+                                    available at a simple web address
+                                    (contrast this to native apps, which
+                                    have to be installed and all that
+                                    business.) Just about any web content
+                                    can be converted to a link, so that when
+                                    clicked (or otherwise activated) it will
+                                    make the web browser go to another web
+                                    address (URL).</p>
+                            </div>
+                            <div id="Anatomy_of_a_link">
+                                <h3>Anatomy of a link</h3>
+                                <p>A basic link is created by wrapping the
+                                    text (or other content, see
+                                    <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Block_level_links"target="_blank">Block level links</a>) you want to turn into a link inside an<code class="inline-code">&lt;a&gt;</code>element, and giving it an<code class="inline-code">&lt;href&gt;</code>
+                                    attribute (also known as a<strong>Hypertext Reference</strong> ,
+                                    or <strong>target</strong>) that will contain the web address you want the link to point to.</p>
+                                <pre><code>&lt;p&gt;I'm creating a link to</code><code>&lt;a href="https://www.mozilla.org/en-US/"&gt;the Mozilla homepage&lt;/a&gt;.</code><code>&lt;/p&gt;</code>
+                            </pre><p>This gives us the following result:</p>
+                                <p>I'm creating a link to<a href="https://www.mozilla.org/en-US/">the Mozilla homepage</a>.</p>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="main-section"id="Advanced_text_formatting">
+                        <header>
+                            <h2>Advanced text formatting</h2>
+                        </header>
+                        <p>There are many other elements in a HTML for
+                            formatting text, which we didn't get to in the<a class="nav-link-doc" href="#HTML_text_fundamentals">HTML text fundamentals</a>
+                            article. The elements described in this article
+                            are less known, but still useful to know about
+                            (and this is still not a complete list by any
+                            means). Here you'll learn about marking up
+                            quotations, description lists, computer code and
+                            other related text, subscript and superscript,
+                            contact information, and more.</p>
+                        <article>
+                            <div id="Description_lists">
+                                <h3>Description lists</h3>
+                                <p>In HTML text fundamentals, we walked
+                                    through how to mark up basic lists in
+                                    HTML, but we didn't mention the third
+                                    type of list you'll occasionally come
+                                    across —<strong>description lists</strong>. The
+                                    purpose of these lists is to mark up a
+                                    set of items and their associated
+                                    descriptions, such as terms and
+                                    definitions, or questions and answers.
+                                    Let's look at an example of a set of
+                                    terms and definitions:</p>
+                                <pre><code>soliloquy</code><code>In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in the process relaying them to the audience (but not to other characters.)</code><code>monologue</code><code>In drama, where a character speaks their thoughts out loud to share them with the audience and any other characters present.</code><code>aside</code><code>In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information</code></pre>
+                                <p> Description lists use a different
+                                    wrapper than the other list types —<code class="inline-code">&lt;dl&gt;</code>; in addition each term is wrapped in a<code class="inline-code">&lt;dt&gt;</code>
+                                    (description term) element, and each
+                                    description is wrapped in a<code class="inline-code">&lt;dd&gt;</code>
+                                    (description definition) element. Let's
+                                    finish marking up our example:</p>
+                                <pre><code>&lt;dl&gt;</code><code>&nbsp;&nbsp;&lt;dt&gt;soliloquy&lt;dt&gt;</code>
+                                <code>&nbsp;&nbsp;&lt;dd&gt;In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in the process relaying them to the audience (but not to other characters.)&lt;dt&gt;</code>
+                                <code>&nbsp;&nbsp;&lt;dt&gt;monologue&lt;dt&gt;</code>to share them with the audience and any other characters present.&lt;dt&gt;</code><code>&nbsp;&nbsp;&lt;dt&gt;aside&lt;dt&gt;</code><code>&nbsp;&nbsp;&lt;dd&gt;In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought, or piece of additional background information.&lt;dt&gt;</code><code>&lt;/dl&gt;</code>
+                            </pre>
+                            </div>
+                            <div id="Quotations">
+                                <h3>Quotations</h3>
+                                <p>HTML also has features available for
+                                    marking up quotations; which element you
+                                    use depends on whether you are marking
+                                    up a block or inline quotation.</p>
+                                <p>If a section of block level content (be
+                                    it a paragraph, multiple paragraphs, a
+                                    list, etc.) is quoted from somewhere
+                                    else, you should wrap it inside a
+                                    <code class="inline-code">&lt;blockquote&gt;</code>
+                                    element to signify this, and include a
+                                    URL pointing to the source of the quote
+                                    inside a cite attribute.</p>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="main-section" id="Reference">
+                        <header>
+                            <h2>Reference</h2>
+                        </header>
+                        <p> All the documentation in this page is taken from
+                            <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started"target="_blanck">MDN</a> and <a href="https://codereview.stackexchange.com/questions/228961/technical-documentation-page-freecodecamp-responsive-web-design-project"target="_blanck">StackExchange</a></p>
+                    </section>
+                </main>
+            </div>
+            <footer style="background-color: darkgreen;">
+                <p><small> code by: Marc Lloyd Runas</small></p>
+            </footer>
+        </div>
+    </div>
+    </body>
+</html>
